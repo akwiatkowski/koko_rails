@@ -5,17 +5,18 @@
 
 Gem::Specification.new do |s|
   s.name = "koko_rails"
-  s.version = "0.0.3"
+  s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Aleksander Kwiatkowski"]
-  s.date = "2012-04-28"
-  s.description = "Mass geotagger using GPX files."
+  s.date = "2012-05-25"
+  s.description = "Adds Jarz\u{119}bina's power to your rails app."
   s.email = "bobikx@poczta.fm"
-  s.executables = ["geotag_all_images", "geotag_simulate"]
+  s.executables = ["koko_rails"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md"
+    "README.md",
+    "TODO"
   ]
   s.files = [
     "Gemfile",
@@ -23,47 +24,41 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md",
     "Rakefile",
+    "TODO",
     "VERSION",
-    "bin/generate_garmin_waypoints",
-    "bin/geotag_all_images",
-    "bin/geotag_simulate",
-    "lib/garmin_utils.rb",
-    "lib/garmin_utils/waypoint_list_generator.rb",
-    "lib/gpx2exif.rb",
-    "lib/gpx2exif/exif_editor.rb",
-    "lib/gpx2exif/geo_manager.rb",
-    "lib/gpx2exif/gpx_parser.rb"
+    "bin/koko_rails",
+    "lib/generators/koko_rails/USAGE",
+    "lib/generators/koko_rails/koko_generator_generator.rb",
+    "lib/generators/koko_rails/templates/app/views/layouts/application.html.haml",
+    "lib/koko_rails.rb"
   ]
-  s.homepage = "http://github.com/akwiatkowski/gpx2exif"
+  s.homepage = "http://github.com/akwiatkowski/koko_rails"
   s.licenses = ["LGPLv3"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.15"
-  s.summary = "Mass geotagger using GPX files"
+  s.summary = "Adds Jarz\u{119}bina's power to your rails app."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_runtime_dependency(%q<mini_exiftool>, [">= 0"])
-      s.add_runtime_dependency(%q<builder>, [">= 0"])
+      s.add_runtime_dependency(%q<rails>, [">= 3.0"])
+      s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
     else
-      s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<mini_exiftool>, [">= 0"])
-      s.add_dependency(%q<builder>, [">= 0"])
+      s.add_dependency(%q<rails>, [">= 3.0"])
+      s.add_dependency(%q<haml>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<simplecov>, [">= 0"])
     end
   else
-    s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<mini_exiftool>, [">= 0"])
-    s.add_dependency(%q<builder>, [">= 0"])
+    s.add_dependency(%q<rails>, [">= 3.0"])
+    s.add_dependency(%q<haml>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
