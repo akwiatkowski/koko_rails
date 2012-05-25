@@ -1,0 +1,27 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "UTF-8"}
+    %title
+      %title= "Koko | #{yield :title}"
+  %body
+    %h1
+      Koko Euro Spoko
+
+    #lyrics
+      = link_to "http://www.tekstowo.pl/piosenka,jarzebina,koko_euro_spoko.html" do
+        %p
+          Cieszą się Polacy,
+        %p
+          Cieszy Ukraina,
+        %p
+          Że tu dla nas wszystkich,
+        %p
+          Euro się zaczyna,
+        %p
+          Że tu dla nas wszystkich,
+        %p
+          Euro się zaczyna.
+
+    #content
+      = yield
