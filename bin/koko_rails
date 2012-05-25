@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'koko_rails'
+require 'optparse'
+
+options = { }
+OptionParser.new do |opts|
+  opts.banner = "Usage: koko_rails [options]"
+
+  opts.on("-v", "--verbose", "Do nothing") do
+    options[:verbose] = true
+  end
+end.parse!

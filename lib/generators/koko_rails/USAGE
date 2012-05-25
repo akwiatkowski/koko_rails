@@ -1,0 +1,8 @@
+Description:
+    his generator creates an awesome Jarzębina based layout
+
+Example:
+    rails generate koko_rails layout
+
+    This will create:
+        Koko-layout
