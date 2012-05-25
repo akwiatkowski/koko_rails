@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/koko_rails",
     "lib/generators/koko_rails/USAGE",
-    "lib/generators/koko_rails/koko_generator_generator.rb",
+    "lib/generators/koko_rails/koko_rails_generator.rb",
     "lib/generators/koko_rails/templates/app/views/layouts/application.html.haml",
     "lib/koko_rails.rb"
   ]
